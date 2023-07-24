@@ -17,11 +17,13 @@ public class SistemaPrincipal {
 try {
 
       while(op != 9){
-            System.out.println("Menu "
+            System.out.println("================"
+            +"\n Menu "
             +"\n 1 - Cadastrar Aluno "
             +"\n 2 - Calcula a Média"
             +"\n 3 - Mostrar Cadastro "
-            +"\n 4 - Visualizar o Resultado do ALuno");
+            +"\n 4 - Visualizar o Resultado do ALuno"
+            +"\n 5 - alterar dados so Curso");
           op = Integer.parseInt(in.nextLine());
 
            switch(op){
@@ -29,6 +31,7 @@ try {
             case 2: calculaMedia();break;
             case 3: mostraDadosCadastrados();break;
             case 4: resultadoAluno();break;
+            case 5: alteraDadosCurso();break;
 
            }
         }
@@ -40,6 +43,95 @@ try {
 }
       
     }
+
+    private static void alteraDadosCurso() {
+
+        System.out.println("Altera Dados "
+        +"\n 1 - alterar Disciplina "
+        +"\n 2 - alterar notas"
+        +"\n======================");
+        int op = Integer.parseInt(in.nextLine());
+
+      
+
+        for (Aluno aluno : alunos) {
+            for (Disciplina disciplina : aluno.getDisciplinas()) {
+                
+             switch(op){
+
+                case 1: System.out.println("Alterar Disciplina");
+                System.out.println("Escolha uma das Disciplinas a seguir para a Troca"
+                +"\n 1 - C# "
+                +"\n 2 - C++ "
+                +"\n 3 - Kotlin"
+                +"\n 4 - MySQL ");
+                int altDisciplina = Integer.parseInt(in.nextLine());
+
+                switch(altDisciplina){
+
+                    case 1: System.out.println("Escolha C# "
+                    +"\n Gostaria de substituir qual das seguintes Disciplina");
+                    System.out.println(" 1 - "+disciplina.getDisciplina1()
+                    +"\n 2 - "+disciplina.getDisciplina2()
+                    +"\n 3 - "+disciplina.getDisciplina3());
+                   int novaDisciplina = Integer.parseInt(in.nextLine());
+
+                   if(novaDisciplina == 1){
+                      System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina1()
+                      +"\n deseja continuar ? "
+                      +"\n 1 - Sim "
+                      +"\n 2 - Não ");
+                      int confirma1 = Integer.parseInt(in.nextLine());
+
+                      if(confirma1 == 1){
+                          System.out.println("Alteração concluida");
+                          String novaDisciplina1 = "C#";
+                          disciplina.setDisciplina1(novaDisciplina1);
+
+                      }else {
+                        break;
+                      }
+
+                    if(novaDisciplina == 2){
+                      System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina2()
+                      +"\n deseja continuar ? "
+                      +"\n 1 - Sim "
+                      +"\n 2 - Não ");
+                      int confirma2 = Integer.parseInt(in.nextLine());
+
+                      if(confirma2 == 1){
+                          System.out.println("Alteração concluida");
+                            String novaDisciplina2 = "C++";
+                          disciplina.setDisciplina1(novaDisciplina2);
+                          
+                      }else {
+                        break;
+                      }
+                   }
+
+                    if(novaDisciplina == 2){
+                      System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina2()
+                      +"\n deseja continuar ? "
+                      +"\n 1 - Sim "
+                      +"\n 2 - Não ");
+                      int confirma3 = Integer.parseInt(in.nextLine());
+
+                      if(confirma3 == 1){
+                          System.out.println("Alteração concluida");
+                          aluno.getDisciplinas().add(disciplina);
+                      }else {
+                        break;
+                      }
+                }
+              }
+             
+            }
+            
+        }
+
+      }
+   }
+}
 
     private static void resultadoAluno() {
 
