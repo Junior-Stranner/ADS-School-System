@@ -109,8 +109,8 @@ try {
                       }
                    }
 
-                    if(novaDisciplina == 2){
-                      System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina2()
+                    if(novaDisciplina == 3){
+                      System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina3()
                       +"\n deseja continuar ? "
                       +"\n 1 - Sim "
                       +"\n 2 - Não ");
@@ -119,6 +119,7 @@ try {
                       if(confirma3 == 1){
                           System.out.println("Alteração concluida");
                           aluno.getDisciplinas().add(disciplina);
+                          System.out.println("Seus dados Atualizados : ");
                       }else {
                         break;
                       }
@@ -214,7 +215,7 @@ try {
 
 }
 
-    private static void mostraDadosCadastrados() {
+    public static void mostraDadosCadastrados() {
        //double media = calculaMedia();
         for (Aluno aluno  : alunos) {
 
