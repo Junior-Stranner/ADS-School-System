@@ -85,8 +85,8 @@ try {
 
                       if(confirma1 == 1){
                           System.out.println("Alteração concluida");
-                          String novaDisciplina1 = "C#";
-                          disciplina.setDisciplina1(novaDisciplina1);
+                          String DiscNova1 = "C#";
+                          disciplina.setDisciplina1(DiscNova1);
 
                       }else {
                         break;
@@ -101,8 +101,8 @@ try {
 
                       if(confirma2 == 1){
                           System.out.println("Alteração concluida");
-                            String novaDisciplina2 = "C++";
-                          disciplina.setDisciplina1(novaDisciplina2);
+                          String DiscNova2 = "C#";
+                          disciplina.setDisciplina2(DiscNova2);
                           
                       }else {
                         break;
@@ -118,13 +118,72 @@ try {
 
                       if(confirma3 == 1){
                           System.out.println("Alteração concluida");
-                          aluno.getDisciplinas().add(disciplina);
-                          System.out.println("Seus dados Atualizados : ");
+                          String DiscNova3 = "C#";
+                          disciplina.setDisciplina3(DiscNova3);
                       }else {
                         break;
                       }
                 }
               }
+
+              
+                    case 2: System.out.println("Escolha C++ "
+                    +"\n Gostaria de substituir qual das seguintes Disciplina");
+                    System.out.println(" 1 - "+disciplina.getDisciplina1()
+                    +"\n 2 - "+disciplina.getDisciplina2()
+                    +"\n 3 - "+disciplina.getDisciplina3());
+                   int novaDisciplina2 = Integer.parseInt(in.nextLine());
+
+                   if(novaDisciplina2 == 1){
+                      System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina1()
+                      +"\n deseja continuar ? "
+                      +"\n 1 - Sim "
+                      +"\n 2 - Não ");
+                      int confirma1 = Integer.parseInt(in.nextLine());
+
+                      if(confirma1 == 1){
+                          System.out.println("Alteração concluida");
+                          String DiscNova1 = "C++";
+                          disciplina.setDisciplina1(DiscNova1);
+
+                      }else {
+                        break;
+                      }
+
+                    if(novaDisciplina2 == 2){
+                      System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina2()
+                      +"\n deseja continuar ? "
+                      +"\n 1 - Sim "
+                      +"\n 2 - Não ");
+                      int confirma2 = Integer.parseInt(in.nextLine());
+
+                      if(confirma2 == 1){
+                          System.out.println("Alteração concluida");
+                            String DiscNova2 = "C++";
+                          disciplina.setDisciplina2(DiscNova2);
+                          
+                      }else {
+                        break;
+                      }
+                   }
+
+                    if(novaDisciplina2 == 3){
+                      System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina3()
+                      +"\n deseja continuar ? "
+                      +"\n 1 - Sim "
+                      +"\n 2 - Não ");
+                      int confirma3 = Integer.parseInt(in.nextLine());
+
+                      if(confirma3 == 1){
+                        System.out.println("Alteração concluida");
+                         String DiscNova3 = "C++";
+                        disciplina.setDisciplina3(DiscNova3);
+                      }else {
+                        break;
+                      }
+                }
+              }
+              /* */
              
             }
             
