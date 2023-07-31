@@ -92,11 +92,6 @@ try {
                         break;
                       }
 
-                        System.out.println("Deseja Continuar as alterações");
-                      String continuar1 = in.nextLine();
-                      if(continuar1.equalsIgnoreCase(continuar1)){
-                         break;
-                      }
 
                     if(novaDisciplina == 2){
                       System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina2()
@@ -114,13 +109,6 @@ try {
                         break;
                       }
 
-                        System.out.println("Deseja Continuar as alterações");
-                      String continuar2 = in.nextLine();
-                      if(continuar2.equalsIgnoreCase(continuar2)){
-                         break;
-                      }
-  
-
                     if(novaDisciplina == 3){
                       System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina3()
                       +"\n deseja continuar ? "
@@ -134,12 +122,6 @@ try {
                           disciplina.setDisciplina3(DiscNova3);
                       }else {
                         break;
-                      }
-
-                        System.out.println("Deseja Continuar as alterações");
-                      String continuar3 = in.nextLine();
-                      if(continuar3.equalsIgnoreCase(continuar3)){
-                         break;
                       }
                    }
                 }
@@ -168,12 +150,6 @@ try {
                         break;
                       }
 
-                        System.out.println("Deseja Continuar as alterações");
-                      String continuar1 = in.nextLine();
-                      if(continuar1.equalsIgnoreCase(continuar1)){
-                         break;
-                      }
-
                     if(novaDisciplina2 == 2){
                       System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina2()
                       +"\n deseja continuar ? "
@@ -189,14 +165,7 @@ try {
                       }else {
                         break;
                       }
-
-                        System.out.println("Deseja Continuar as alterações");
-                      String continuar2 = in.nextLine();
-                      if(continuar2.equalsIgnoreCase(continuar2)){
-                         break;
-                      }
-                
-
+              
                     if(novaDisciplina2 == 3){
                       System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina3()
                       +"\n deseja continuar ? "
@@ -210,12 +179,6 @@ try {
                         disciplina.setDisciplina3(DiscNova3);
                       }else {
                         break;
-                      }
-
-                        System.out.println("Deseja Continuar as alterações");
-                      String continuar3 = in.nextLine();
-                      if(continuar3.equalsIgnoreCase(continuar3)){
-                         break;
                       }
                     }
                  }
@@ -245,12 +208,6 @@ try {
                         break;
                       }
 
-                        System.out.println("Deseja Continuar as alterações");
-                      String continuar1 = in.nextLine();
-                      if(continuar1.equalsIgnoreCase(continuar1)){
-                         break;
-                      }
-
                     if(novaDisciplina3 == 2){
                       System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina2()
                       +"\n deseja continuar ? "
@@ -267,13 +224,6 @@ try {
                         break;
                       }
 
-                        System.out.println("Deseja Continuar as alterações");
-                      String continuar2 = in.nextLine();
-                      if(continuar2.equalsIgnoreCase(continuar2)){
-                         break;
-                      }
-                   
-
                     if(novaDisciplina3 == 3){
                       System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina3()
                       +"\n deseja continuar ? "
@@ -287,12 +237,6 @@ try {
                         disciplina.setDisciplina3(DiscNova3);
                       }else {
                         break;
-                      }
-
-                        System.out.println("Deseja Continuar as alterações");
-                      String continuar3 = in.nextLine();
-                      if(continuar3.equalsIgnoreCase(continuar3)){
-                         break;
                       }
                     }
                  }
@@ -320,12 +264,7 @@ try {
                       }else {
                         break;
                       }
-                       System.out.println("Deseja Continuar as alterações");
-                      String continuar1 = in.nextLine();
-                      if(continuar1.equalsIgnoreCase(continuar1)){
-                         break;
-                      }
-
+                    
                     if(novaDisciplina4 == 2){
                       System.out.println("Você irá substituir a Disciplina "+disciplina.getDisciplina2()
                       +"\n deseja continuar ? "
@@ -340,12 +279,6 @@ try {
                           
                       }else {
                         break;
-                      }
-                      
-                      System.out.println("Deseja Continuar as alterações");
-                      String continuar2 = in.nextLine();
-                      if(continuar2.equalsIgnoreCase(continuar2)){
-                         break;
                       }
 
                     if(novaDisciplina4 == 3){
@@ -362,12 +295,7 @@ try {
                       }else {
                         break;
                       }
-
-                      System.out.println("Deseja Continuar as alterações");
-                      String continuar3 = in.nextLine();
-                      if(continuar3.equalsIgnoreCase(continuar3)){
-                         break;
-                      }
+                      break;
                 }
               }
              
@@ -382,7 +310,65 @@ try {
           int opNotas = Integer.parseInt(in.nextLine());
 
           if(opNotas == 1){
-            
+             System.out.println(alunos.size());
+             System.out.println("Escolha notas da Primeira Disciplina"
+             +"\n 1 - Nota 1 "
+             +"\n 2 - Nota 2 "
+             +"\n 3 - Nota 3 ");
+             int notasDisc1 = Integer.parseInt(in.nextLine());
+
+             switch(notasDisc1){
+
+              case 1: System.out.println(" Nota 1 será alterada !!");
+              System.out.println("Digite a nota Desejada");
+              double novaNota1 = Double.parseDouble(in.nextLine());
+
+             // String novaNota1Str = String.valueOf(novaNota1);
+             // aluno.setDisciplinas(novaNota1);
+             disciplina.setNota1(novaNota1);
+             }
+          }
+
+          
+          if(opNotas == 2){
+             System.out.println(alunos.size());
+             System.out.println("Escolha notas da Primeira Disciplina"
+             +"\n 1 - Nota 1 "
+             +"\n 2 - Nota 2 "
+             +"\n 3 - Nota 3 ");
+             int notasDisc2 = Integer.parseInt(in.nextLine());
+
+             switch(notasDisc2){
+
+              case 1: System.out.println(" Nota 2 será alterada !!");
+              System.out.println("Digite a nota Desejada");
+              double novaNota2 = Double.parseDouble(in.nextLine());
+
+             // String novaNota1Str = String.valueOf(novaNota1);
+             // aluno.setDisciplinas(novaNota1);
+             disciplina.setNota1(novaNota2);
+             }
+          }
+
+             
+          if(opNotas == 3){
+             System.out.println(alunos.size());
+             System.out.println("Escolha notas da Primeira Disciplina"
+             +"\n 1 - Nota 1 "
+             +"\n 2 - Nota 2 "
+             +"\n 3 - Nota 3 ");
+             int notasDisc3 = Integer.parseInt(in.nextLine());
+
+             switch(notasDisc3){
+
+              case 1: System.out.println(" Nota 3 será alterada !!");
+              System.out.println("Digite a nota Desejada");
+              double novaNota3 = Double.parseDouble(in.nextLine());
+
+             // String novaNota1Str = String.valueOf(novaNota1);
+             // aluno.setDisciplinas(novaNota1);
+             disciplina.setNota1(novaNota3);
+             }
           }
         }
       }

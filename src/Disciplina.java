@@ -39,8 +39,8 @@ public String getDisciplina2() {
     return disciplina2;
 }
 
-public void setDisciplina2(int i) {
-    this.disciplina2 = i;
+public void setDisciplina2(String disciplina2) {
+    this.disciplina2 = disciplina2;
 }
 
 public String getDisciplina3() {
@@ -87,13 +87,5 @@ public String toString() {
     + ", nota2=" + nota2 
     + ", nota3=" + nota3 + "]";
 }
-
-
-
-
-public void setDisciplina2(String discNova2) {
-}
-
-
   
  }
